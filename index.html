@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="apples-counter">🍎 <span id="apples-count">0</span></div>
     <div class="container">
         <div class="card">
             <h1 id="status-text">Hora de Focar!</h1>
-            <img src="focus.png" alt="Hello Kitty Focusing" id="status-image">
+            <img src="assets/hello_kitty.png" alt="Hello Kitty Focusing" id="status-image">
             <div class="timer" id="timer">25:00</div>
             <div class="controls">
                 <button id="start-btn">Iniciar</button>
@@ -21,7 +24,26 @@
                 <button id="reset-btn">Resetar</button>
             </div>
         </div>
+
+        <div class="store-container">
+            <h2>Kitty Store</h2>
+            <div class="store-grid" id="store-grid">
+                <!-- Character cards will be injected here by JS -->
+            </div>
+        </div>
     </div>
+
+    <!-- Celebration Modal -->
+    <div id="celebration-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Parabéns!</h2>
+            <p>Você completou um ciclo de foco!</p>
+            <p class="bonus-text">+3 🍎</p>
+            <button id="close-modal-btn">Continuar</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
